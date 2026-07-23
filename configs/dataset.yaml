@@ -1,0 +1,75 @@
+# ==========================================================
+# Dataset Configuration
+# Brain Tumor Detection using Semi-Supervised Learning
+# ==========================================================
+
+dataset:
+  raw_dir: datasets/raw
+  labeled_dir: datasets/labeled
+  unlabeled_dir: datasets/unlabeled
+  processed_dir: datasets/processed
+  metadata_dir: datasets/metadata
+
+# ----------------------------------------------------------
+# Brain Tumor MRI Dataset (Labeled)
+# ----------------------------------------------------------
+brain_tumor_mri:
+  dataset_name: BrainTumorMRI
+
+  training_dir: Training
+  testing_dir: Testing
+
+  classes:
+    - glioma
+    - meningioma
+    - pituitary
+    - notumor
+
+# ----------------------------------------------------------
+# Br35H Dataset (Used as Unlabeled)
+# ----------------------------------------------------------
+br35h:
+  dataset_name: Br35H
+
+  use_unlabeled:
+    - yes
+    - no
+
+  ignore:
+    - Br35H-Mask-RCNN
+    - pred
+
+# ----------------------------------------------------------
+# Split Configuration
+# ----------------------------------------------------------
+split:
+
+  train_ratio: 0.85
+
+  validation_ratio: 0.15
+
+  random_seed: 42
+
+# ----------------------------------------------------------
+# Image Configuration
+# ----------------------------------------------------------
+image:
+
+  width: 224
+
+  height: 224
+
+  channels: 3
+
+  color_mode: rgb
+
+# ----------------------------------------------------------
+# File Extension
+# ----------------------------------------------------------
+supported_extensions:
+
+  - jpg
+
+  - jpeg
+
+  - png
