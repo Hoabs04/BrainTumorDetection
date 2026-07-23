@@ -1,0 +1,18 @@
+model:
+  name: efficientnet_b0
+  num_classes: 4
+  input_size: 224
+  pretrained: true
+
+preprocessing:
+  image_size: 224
+  color_mode: RGB
+  interpolation: bicubic
+
+training:
+  batch_size: 32
+  num_workers: 4
+  pin_memory: true
+
+random:
+  seed: 42

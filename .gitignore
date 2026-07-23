@@ -1,0 +1,32 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# AI Models
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Outputs
+outputs/
+
+# Dataset
+datasets/raw/
+datasets/labeled/
+datasets/unlabeled/
+datasets/processed/
+
+# Generated metadata
+datasets/metadata/*.csv
+datasets/metadata/*.json
+
+# Logs
+*.log
